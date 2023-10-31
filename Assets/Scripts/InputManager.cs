@@ -5,14 +5,18 @@ public static class InputManager
     private static Controls _ctrls;
 
     private static Vector3 _mousePos;
+
+    private static Camera cam;
     public static Ray GetCameraRay()
     {
-        return Camera.current.ScreenPointToRay(_mousePos);
+        return cam.ScreenPointToRay(_mousePos);
     }
 
     public static void Init(Player p)
     {
         _ctrls = new();
+        
+        cam = Camera.main;
         
         _ctrls.Permenanet.Enable();
 

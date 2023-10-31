@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    [SerializeField] private WeaponBase myWeapon;
+    private bool weaponShootToggle;
+    
     private void Start()
     {
         InputManager.Init(this);
@@ -14,5 +18,9 @@ public class Player : MonoBehaviour
     public void Shoot()
     {
         print("I shot: " + InputManager.GetCameraRay());
+        weaponShootToggle = !weaponShootToggle;
+        if(weaponShootToggle) myWeapon.StartShooting();
+        else myWeapon.StopShooting();
+        
     }
 }
