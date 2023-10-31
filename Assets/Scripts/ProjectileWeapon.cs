@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileWeapon : WeaponBase
+public class ShotgunWeapon : WeaponBase
 {
-    [SerializeField] private Rigidbody bullet1;
-    [SerializeField] private Rigidbody bullet2;
+    [SerializeField] private Rigidbody bulletPrefab1;
+    [SerializeField] private Rigidbody bulletPrefab2;
+    [SerializeField] private int numBullets = 5;
+    [SerializeField] private float spreadAngle = 20.0f;
     [SerializeField] private float force = 50;
+
     protected override void Attack(float percent)
     {
-        print("Attacking with percent: " + percent);
+        print("Firing shotgun with percent: " + percent);
         Ray camRay = InputManager.GetCameraRay();
-        Rigidbody rb = Instantiate(percent > 0.5f ? bullet2 : bullet1, camRay.origin, transform.rotation);
-        rb.AddForce(Mathf.Max(percent, 0.1f) * force * camRay.direction, ForceMode.Impulse);
-        Destroy(rb.gameObject, 2);
+        
+        Rigidbody selectedBulletPrefab = percent > 0.5f ? bulletPrefab2 : bulletPrefab1;
+
+        for (int i = 0; i < numBullets; i++)
+        {
+            // Calculate a random direction within the spread angle
+            Quaternion randomRotation = Quaternion.Euler(Random.Range(-spreadAngle, spreadAngle), Random.Range(-spreadAngle, spreadAngle), 0);
+            
+            Vector3 randomDirection = randomRotation * camRay.direction;
+            Rigidbody rb = Instantiate(selectedBulletPrefab, camRay.origin, Quaternion.LookRotation(randomDirection));
+            rb.AddForce(Mathf.Max(percent, 0.1f) * force * randomDirection, ForceMode.Impulse);
+            Destroy(rb.gameObject, 2);
+        }
     }
 }
