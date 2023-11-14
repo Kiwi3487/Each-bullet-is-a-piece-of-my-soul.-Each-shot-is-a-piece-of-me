@@ -17,14 +17,15 @@ public class ShotgunWeapon : WeaponBase
         
         Rigidbody selectedBulletPrefab = percent > 0.5f ? bulletPrefab2 : bulletPrefab1;
 
-        for (int i = 0; i < numBullets; i++)//Loop multiple bullets for shot gun
+        for (int i = 0; i < numBullets; i++)
         {
-            Quaternion randomRotation = Quaternion.Euler(Random.Range(-spreadAngle, spreadAngle), Random.Range(-spreadAngle, spreadAngle), 0);// Calculate a random direction in spread angle
+            // Calculate a random direction within the spread angle
+            Quaternion randomRotation = Quaternion.Euler(Random.Range(-spreadAngle, spreadAngle), Random.Range(-spreadAngle, spreadAngle), 0);
             
-            Vector3 randomDirection = randomRotation * camRay.direction; //Gets the calculations
-            Rigidbody rb = Instantiate(selectedBulletPrefab, camRay.origin, Quaternion.LookRotation(randomDirection));//create bullets on mouse
-            rb.AddForce(Mathf.Max(percent, 0.1f) * force * randomDirection, ForceMode.Impulse);//Speed of bullets 
-            Destroy(rb.gameObject, 2); //destory bullets after x second
+            Vector3 randomDirection = randomRotation * camRay.direction;
+            Rigidbody rb = Instantiate(selectedBulletPrefab, camRay.origin, Quaternion.LookRotation(randomDirection));
+            rb.AddForce(Mathf.Max(percent, 0.1f) * force * randomDirection, ForceMode.Impulse);
+            Destroy(rb.gameObject, 2);
         }
     }
 }
