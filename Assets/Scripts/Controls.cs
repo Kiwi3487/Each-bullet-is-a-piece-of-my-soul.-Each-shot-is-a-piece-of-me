@@ -35,6 +35,69 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""1b1bccae-4a94-4501-8dab-0c63a40a6f46"",
+                    ""expectedControlType"": ""Vector3"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""f59e1e6f-6735-41b5-9e19-336bc4c880d7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""bef0d73c-2bff-4dae-a876-c80d87b4eac2"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""e3f383f7-b48c-4ed3-ae36-ce869cb55337"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ShotGunWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""5facc4fd-a7d6-4431-8fca-bc986aa1de0a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BurstFireWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""453f4f9c-64ab-47ba-89f0-e9e0791512ce"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SingleFireWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""024058ab-2b98-4f4b-8da9-91f4f6a1f4c3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -46,6 +109,127 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""51de5152-a6b1-410b-9703-6356a3f4fa4a"",
+                    ""path"": ""3DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""8e4a2d62-5a47-4f53-8ab8-bdb0ba356dc7"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""a6984c57-a0e4-414f-9034-63f157d849c3"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""forward"",
+                    ""id"": ""acc23801-9b5f-4b54-8c43-cf2b48bab930"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""backward"",
+                    ""id"": ""8bc576a1-a4cd-4869-be59-338db109aee3"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1a409368-5d37-4a9e-8903-08002735bc5b"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0f53a708-c7b5-4d83-ba20-218e9c6b4c5a"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ac0625b-6c2d-472f-a4d2-8d78df3bd3d6"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""42b60151-de41-4750-af4c-8956f08fdc7e"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShotGunWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aa7246c3-2e53-4797-aeb8-8a8a00df96cc"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BurstFireWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d4a127c8-d54d-4b19-b09f-20492aefab69"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SingleFireWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -85,6 +269,13 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         // InGame
         m_InGame = asset.FindActionMap("InGame", throwIfNotFound: true);
         m_InGame_Shoot = m_InGame.FindAction("Shoot", throwIfNotFound: true);
+        m_InGame_Movement = m_InGame.FindAction("Movement", throwIfNotFound: true);
+        m_InGame_Jump = m_InGame.FindAction("Jump", throwIfNotFound: true);
+        m_InGame_Look = m_InGame.FindAction("Look", throwIfNotFound: true);
+        m_InGame_Reload = m_InGame.FindAction("Reload", throwIfNotFound: true);
+        m_InGame_ShotGunWeapon = m_InGame.FindAction("ShotGunWeapon", throwIfNotFound: true);
+        m_InGame_BurstFireWeapon = m_InGame.FindAction("BurstFireWeapon", throwIfNotFound: true);
+        m_InGame_SingleFireWeapon = m_InGame.FindAction("SingleFireWeapon", throwIfNotFound: true);
         // Permenanet
         m_Permenanet = asset.FindActionMap("Permenanet", throwIfNotFound: true);
         m_Permenanet_MousePos = m_Permenanet.FindAction("MousePos", throwIfNotFound: true);
@@ -150,11 +341,25 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_InGame;
     private List<IInGameActions> m_InGameActionsCallbackInterfaces = new List<IInGameActions>();
     private readonly InputAction m_InGame_Shoot;
+    private readonly InputAction m_InGame_Movement;
+    private readonly InputAction m_InGame_Jump;
+    private readonly InputAction m_InGame_Look;
+    private readonly InputAction m_InGame_Reload;
+    private readonly InputAction m_InGame_ShotGunWeapon;
+    private readonly InputAction m_InGame_BurstFireWeapon;
+    private readonly InputAction m_InGame_SingleFireWeapon;
     public struct InGameActions
     {
         private @Controls m_Wrapper;
         public InGameActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Shoot => m_Wrapper.m_InGame_Shoot;
+        public InputAction @Movement => m_Wrapper.m_InGame_Movement;
+        public InputAction @Jump => m_Wrapper.m_InGame_Jump;
+        public InputAction @Look => m_Wrapper.m_InGame_Look;
+        public InputAction @Reload => m_Wrapper.m_InGame_Reload;
+        public InputAction @ShotGunWeapon => m_Wrapper.m_InGame_ShotGunWeapon;
+        public InputAction @BurstFireWeapon => m_Wrapper.m_InGame_BurstFireWeapon;
+        public InputAction @SingleFireWeapon => m_Wrapper.m_InGame_SingleFireWeapon;
         public InputActionMap Get() { return m_Wrapper.m_InGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -167,6 +372,27 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Shoot.started += instance.OnShoot;
             @Shoot.performed += instance.OnShoot;
             @Shoot.canceled += instance.OnShoot;
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
+            @Reload.started += instance.OnReload;
+            @Reload.performed += instance.OnReload;
+            @Reload.canceled += instance.OnReload;
+            @ShotGunWeapon.started += instance.OnShotGunWeapon;
+            @ShotGunWeapon.performed += instance.OnShotGunWeapon;
+            @ShotGunWeapon.canceled += instance.OnShotGunWeapon;
+            @BurstFireWeapon.started += instance.OnBurstFireWeapon;
+            @BurstFireWeapon.performed += instance.OnBurstFireWeapon;
+            @BurstFireWeapon.canceled += instance.OnBurstFireWeapon;
+            @SingleFireWeapon.started += instance.OnSingleFireWeapon;
+            @SingleFireWeapon.performed += instance.OnSingleFireWeapon;
+            @SingleFireWeapon.canceled += instance.OnSingleFireWeapon;
         }
 
         private void UnregisterCallbacks(IInGameActions instance)
@@ -174,6 +400,27 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Shoot.started -= instance.OnShoot;
             @Shoot.performed -= instance.OnShoot;
             @Shoot.canceled -= instance.OnShoot;
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
+            @Reload.started -= instance.OnReload;
+            @Reload.performed -= instance.OnReload;
+            @Reload.canceled -= instance.OnReload;
+            @ShotGunWeapon.started -= instance.OnShotGunWeapon;
+            @ShotGunWeapon.performed -= instance.OnShotGunWeapon;
+            @ShotGunWeapon.canceled -= instance.OnShotGunWeapon;
+            @BurstFireWeapon.started -= instance.OnBurstFireWeapon;
+            @BurstFireWeapon.performed -= instance.OnBurstFireWeapon;
+            @BurstFireWeapon.canceled -= instance.OnBurstFireWeapon;
+            @SingleFireWeapon.started -= instance.OnSingleFireWeapon;
+            @SingleFireWeapon.performed -= instance.OnSingleFireWeapon;
+            @SingleFireWeapon.canceled -= instance.OnSingleFireWeapon;
         }
 
         public void RemoveCallbacks(IInGameActions instance)
@@ -240,6 +487,13 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     public interface IInGameActions
     {
         void OnShoot(InputAction.CallbackContext context);
+        void OnMovement(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
+        void OnShotGunWeapon(InputAction.CallbackContext context);
+        void OnBurstFireWeapon(InputAction.CallbackContext context);
+        void OnSingleFireWeapon(InputAction.CallbackContext context);
     }
     public interface IPermenanetActions
     {
