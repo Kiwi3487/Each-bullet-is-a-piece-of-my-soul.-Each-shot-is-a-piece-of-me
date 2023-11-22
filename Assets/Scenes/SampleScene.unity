@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6336bbc66ef6de4daf8fb9aa04a07c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0
+  timeBetweenAttacks: 1
   chargeUpTime: 0.5
   minChargePercent: 0
   isFullyAuto: 0
@@ -1661,7 +1661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2030a283fd83df46b4f22ad6cd9605f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0
+  timeBetweenAttacks: 1
   chargeUpTime: 0
   minChargePercent: 0
   isFullyAuto: 0
@@ -2413,7 +2413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193b60a4f387d8845a7447f2590ea7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0
+  timeBetweenAttacks: 1
   chargeUpTime: 0
   minChargePercent: 0
   isFullyAuto: 0
