@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Player : MonoBehaviour
 {
+    public ScriptableObjects.BulletSO bulletSO;
     [SerializeField] private WeaponBase shotGunWeapon;
     [SerializeField] private WeaponBase burstFireWeapon;
     [SerializeField] private WeaponBase singleFireWeapon;
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
 
     private int selectedGun = 1;
     private string currentWeapon;
+    private string currentElement;
 
     
     private void Start()
@@ -51,6 +53,7 @@ public class Player : MonoBehaviour
     {
         transform.position += transform.rotation * (speed * Time.deltaTime * _moveDirection);
         CheckGround();
+        SwitchBullets();
     }
     
     public void SetLookRotation(Vector2 readValue)
@@ -157,5 +160,29 @@ public class Player : MonoBehaviour
         selectedGun = 3;
         currentWeapon = "Single Shot Gun";
         SwitchWeaponSound.Play();
+    }
+    
+    
+    public void SwitchBullets()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            bulletSO.SetBulletParticles(ScriptableObjects.EProjectileType.Earth);
+            currentElement = "Earth";
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            bulletSO.SetBulletParticles(ScriptableObjects.EProjectileType.Water);
+            currentElement = "Water";
+        }
+        else if (Input.GetKeyDown(KeyCode.F))
+        {
+            bulletSO.SetBulletParticles(ScriptableObjects.EProjectileType.Fire);
+            currentElement = "Fire";
+        }
+    }
+    public string GetCurrentElement()
+    {
+        return currentElement;
     }
 }

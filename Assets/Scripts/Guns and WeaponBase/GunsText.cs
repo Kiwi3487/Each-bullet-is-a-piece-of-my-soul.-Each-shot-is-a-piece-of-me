@@ -5,12 +5,12 @@ using TMPro;
 public class GunsText : MonoBehaviour
 {
     TextMeshProUGUI textField;
-    Player player; // Reference to the Player class
+    Player player; // Reference to the player class
     // Start is called before the first frame update
     void Start()
     {
         textField = GameObject.Find("GunText").GetComponent<TextMeshProUGUI>();
-        player = FindObjectOfType<Player>(); // Find the Player component in the scene
+        player = FindObjectOfType<Player>(); // Find the player component in the scene
     }
     // Update is called once per frame
     void Update()
